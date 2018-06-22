@@ -1,0 +1,28 @@
+.list-select {
+  width: 300px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    -webkit-box-shadow: 2px 2px 12px 0px rgba(61, 61, 61, 1);
+    -moz-box-shadow: 2px 2px 12px 0px rgba(61, 61, 61, 1);
+    box-shadow: 2px 2px 12px 0px rgba(61, 61, 61, 1);
+
+    .title {
+      background: navy;
+      color: whitesmoke;
+      border: 1px solid black;
+    }
+
+    li {
+      padding: 3px;
+      border-bottom: 1px solid black;
+      list-style-type: none;
+      text-align: center;
+    }
+  }
+
+  .selected {
+    background: lightblue;
+  }
+}

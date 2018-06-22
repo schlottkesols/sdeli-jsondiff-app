@@ -1,0 +1,35 @@
+@import url("./DiffFormat.css");
+
+.diff {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+
+  p {
+    height: 250px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+  }
+
+  .diff-left,
+  .diff-right {
+    float: left;
+    width: 50%;
+  }
+
+  .diff-result {
+    width: 100%;
+    p {
+      background-color: #24282a;
+      color: #d4d4d4;
+      overflow: scroll;
+    }
+  }
+}

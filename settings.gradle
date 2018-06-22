@@ -1,0 +1,4 @@
+rootProject.name = 'diff-service'
+include 'diff-service/react-app'
+include 'diff-service'
+

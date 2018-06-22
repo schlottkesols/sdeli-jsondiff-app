@@ -1,0 +1,39 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.3.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "com.moowork.gradle:gradle-node-plugin:1.2.0"
+    }
+}
+
+apply plugin: 'com.moowork.node'
+
+node {
+    version = '10.1.0'
+    yarnVersion = '1.7.0'
+    download = true
+}
+
+task build(type: YarnTask){
+    group = "build"
+    description="Build the web app."
+    args = ['build']
+}
+
+task start(type: YarnTask){
+    group = "build"
+    description="Run web app."
+    args = ['start']
+}
+
+task test(type: YarnTask){
+    group = "verification"
+    description="Run web app unit tests."
+    args = ['test']
+}
